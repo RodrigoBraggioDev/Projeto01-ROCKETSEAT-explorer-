@@ -1,0 +1,64 @@
+<!--Uma boa prática de HTML, ja vem no vscode: é só escrever: !, aparecerá o Emmet Abbreviation, dar ENTER. e o resultado segue abaixo-->
+<!DOCTYPE html> <!--doctype nao é considerada uma tag, e sim uma instrução para definir o tipo de html, esse doctype(a instrução), está definindo que este é um HTML 5-->
+<html lang="pt-br"> <!--nessa linha ja há uma TAG que é a HTML, essa tag HTML é considerada como tag ROOT(raiz), HTML é o PAI do HEAD, BODY. Utilizaremos na lang o pt-br-->
+<head> <!--essa é uma TAG filha da HTML. Isso aqui é chamado de ELEMENTOS HTML. o HEAD contém instruções para a própria pagina/html para que entenda coisas;-->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"><!--rel="" significa RELATION, ou seja, significa qual é a relação do link, nesse exercicio a relação é de preconnect, ou seja, será feito uma pre conexao para nós-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8"> <!--CHAR é CARACTER. SET é CONJUNTO, ou seja, CHARSET é CONJUNTO de CARACTERES--> <!--praticamente sempre é UTF-8(que é o que aceita caracteres especiais e tal).-->
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> ESSA LINHA É ELIMINADA POIS É DO INTERNET EXPLORER ANTIGO-->
+  <!--Essa instrução é IMPORTANTÍSSIMA somente para fazermos sites que são adaptados a dispositivos móveis.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--VIEWPORT é tudo o documento(site) que conseguimos VER ao abri-lo.--> <!--WIDTH=DEVICE-WIDTH é a LARGURA DO MEU DISPOSITIVO.--><!--initial-scale é a escala inicial do documento, ou seja nao é preciso dar zoom no documento.-->
+  <!--tudo que é META, significa o próprio documento-->
+  
+  <title>Móveis customizados</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"><!--a TAG link, vai fazer referencia(href="") a um CSS externo(se eu pegar o link colado no href e coloca-lo na busca do navegador será encontrado código CSS criado pelo google)-->
+  
+  <link rel="stylesheet" href="style.css"><!-- esse link cria um CSS. Nota-se que o href="" desse link retoma o style.css, perceba que não há nenhum protocolo, como exemplo(http, https...), ou seja, entao tenho que procurar na raiz do projeto-->
+
+</head>
+<body> <!--essa é uma TAG filha da HTML. Isso aqui é chamado de ELEMENTOS HTML. o BODY é o corpo, o que tem apresentação VISUAL para o cliente-->
+  <img 
+  id="balls"
+  src="images/balls.svg" 
+  alt="Bolinhas laranjadas no canto direito inferior da tela"/><!--img é uma tag diferente das outras que vimos, pois não tem um conteúdo interno, por isso deve ser fechada nela mesma(usa-se: / para fechar.)--><!--como é uma imagem precisa da localização da imagem e por isso usa-se o src=""(signifca source(origem))--><!--um atributo usado quando se usa img, é o alt="", que é um ALTERNATIVO A IMAGEM, quando a imagem nao estiver disponivel, ou para alguns leitores de tela, pessoas que precisam de acessibilidade não vão conseguir ver a imagem mesmo a que a tela esteja lendo, então o ALTERNATIVO será lido.-->
+  
+  <div id="hero"><!--essa tag DIV serve para fazer um AGRUPAMENTO, como se fosse uma caixinha/container para eu colocar as coisas dentro. É uma tag muito utilizada quando nao tenho exatamente uma tag para fazer um agrupamento--><!--id="" é o IDENTIFICADOR dessa div, ou seja, é o NOME da caixinha/container--><!--a div fica UM ABAIXO DO OUTRO na exibição web-->
+    <img 
+    src="images/img1.jpeg" 
+    alt="Desenho de uma pessoa vestindo uma camisa amarela em uma sala com móveis"/><!--além do alt="" ajudar na acessibilidade, essa ALTERNATIVA(alt="") é muito bom para os motores de busca(como por exemplo se for fazer uma pesquisa no google e escrever pessoa vestindo camisa amarela, pode ser que esta pagina apareça nas pesquisas do google).-->
+    <h1><!--quando há um texto grande geralmente utiliza-se a tag h1, h2, h3, h4, h5 ou h6.(o texto começa grande no h1 e fica menor no h6)--><!--o h1 é relativo ao heading/header 1 (significa titulo), ou seja do h1 ao h6 utilizamos para TITULOS--><!--o h fica UM ABAIXO DO OUTRO na exibição web-->
+      Ambientes <span>únicos</span> para você! <!-- essa tag span é utilizada para manter tudo INLINE, ou seja na mesma linha, só essa tag span nao vai mudar em nada na exibição WEB, porém mais tarde eu colocarei uma cor nele através o style="", ou css. e essa configuração para que não quebre precisa ser mantido inline, por exemplo se eu usasse a tag div em vez de span, a frase iria quebrar e o texto ficaria um abaixo do outro pois o div é um elemento BLOCK, mas quero ele um ao lado do outro entao uso o span-->
+    </h1>
+    <p><!--o p é utilizado para PARÁGRAFOS--> <!--o p fica UM ABAIXO DO OUTRO na exibição web, é um elemento BLOCK-->
+      Nós criamos ambientes <strong>exclusívos</strong> e <strong>únicos</strong>,<!--strong faz automaticamente o NEGRITO, também é uma tag INLINE, assim como a tag span e a tag a.-->
+      com muito bom gosto e profissionalismo,
+      investimos tempo e <span>dedicação no seu projeto.</span>
+    
+      <br/> <!--tag <br/> é utilizada para realizar a QUEBRA DE LINHA, pois sabemos que o HTML nao tem por padrão a quebra de linha, entao é necessario utilizar essa tag.-->
+      <br/>
+
+      Tenha <span>ambientes limpos</span> e bem decorados,
+      transmitindo <strong>elegância e finesse</strong> para todo 
+      aquele que estiver ali.
+    </p>
+  </div>
+
+  <div id="footer">
+    
+    <div class="line"></div>
+
+    <a
+    target="_blank" href="https://instagram.com/moveisparavoce"> <!--tag a, utiliza-se para LINKS--> <!--o a fica UM AO LADO DO OUTRO na exibição web--> <!--Target="_blank" é executado para abrir uma nova janela ao clicar no link-->
+      Instagram
+    </a>
+    <a href="mailto:contato@moveisparavoce.com">
+      Fale conosco
+    </a>
+  </div>
+  
+</body>
+</html>
+<!--Essa estrutura acima é a base e basica que vamos usar praticamente para todos os HTML que formos criar-->

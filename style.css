@@ -1,0 +1,57 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center; /*text-align é ALINHAMENTO DO TEXTO*/ /*Nota-se que está escrito text-align, porém ele acaba alinhando também outros elementos como exemplo: imagens. Só que há momentos que ele não vai alinhar alguns elementos*/
+  margin: 0; /*foi colocado o margin: 0; para a pagina web ficar correta na margem 0. pois os navegadores por padrão deixam 8px, então para corrigir isso deve-se colocar margin: 0;*/
+
+}
+
+#hero {
+  width: 592px;/*width significa LARGURA*/
+  margin: 0 auto 72px;/*margin é MARGEM. utilizei o margin: auto; pois automaticamente ele vai preencher o lado mais vazio deixando os lados equilibrados, consequentemente alinhando o texto de forma CENTRAL*/ /*o AUTO, vai equilibrar as laterais (left, right) e não cima, baixo(top, bottom)*/
+/*Nota-se que está: margin: 72px auto 72px;. O primeiro valor(0) vai configurar CIMA(TOP), o segundo valor(auto), vai configurar as LATERAIS(direita e esquerda), e o terceiro valor(72px) vai configurar BAIXO(BOTTOM).
+}
+
+#hero img {
+margin-bottom: 72px;/*margin-botton, significa MARGEM INFERIOR.*/
+}
+
+/*Nota-se que o H1, automaticamente, quando aplicado em uma página web tem por padrão o NEGRITO.*/
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 49px; /*font-size é o TAMANHO DA FONTE e é calculada em PIXELS(px)*/
+  line-height: 56px; /*line-height significa ALTURA DA LINHA*/
+  font-weight: normal; /*Font-weight é o PESO DA FONTE. Por causa do H1 ter o padrão NEGRITO, é necessário utilizar a font-weight se nao quiser deixar em negrito.*/
+  margin-bottom: 32px;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+span, a {
+  color: #FF9900;
+}
+
+p, #footer {
+  color: #7D7987;
+  font-size: 14px; /*Tamanho da fonte*/
+  line-height: 28px; /*Espaçamento entre linhas*/
+}
+
+#footer a + a { /*o que significa a + a? A linguagem entende que voce quer pegar o A que anterior a ele tenha um A, ou seja, quer pegar o último A que anterior a ele tenha um A*/
+  margin-left: 28px; /*devido a instrução acima, que eu peguei o A que anterior a ele tenha um A. Essa instrução margin-left só vai configurar o A selecionado que no caso é o Segundo A.*/
+}
+
+.line { /* o ponto final antes de line (.line) referência a CLASS do HTML.*/
+  width: 568px; /*largura*/
+  height: 0; /*altura*/ /*Professor: "ta e ai, cade essa linha? tem 0 de altura? O grande segredo ta aqui nessa borda.*/
+  margin: 0 auto 8px;
+  
+  border: 1px solid #ECEFF2; /*border é a BORDA*/ /* esse SOLID é o estilo da borda, existem outros como por exemplo o DASHED que é linha pontilhada.*/
+}
+
+#balls {
+  position: fixed; /*Quando criamos um POSITION, habilitamos novas propriedades como: top, bottom, right, left*//*O position padrão dos elementos é o STATIC e é um elemento que não tem habilitado por padrão as novas propriedades.*/
+  bottom: 0px;
+  right: 0px;
+}
